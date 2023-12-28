@@ -5,7 +5,7 @@
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/7.5/samples
  */
 plugins {
-    id 'java'
+    id 'application'
     id 'jacoco'
 }
 
@@ -37,4 +37,8 @@ jacocoTestReport {
 jacoco {
     toolVersion = "0.8.9"
     reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+}
+
+application {
+    mainClass = 'dilib.Main' 
 }
