@@ -8,13 +8,15 @@ import org.junit.Test;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertSame;
 
+import dilib.DiEnvironment;
+
 public class Example {
 
     private Container container;
 
     @Before
     public void setUp() {
-        Environment env = new DummyEnvironment();
+        Environment env = new DiEnvironment();
         container = env.configure(new MyConfiguration());
     }
 
