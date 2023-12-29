@@ -28,3 +28,17 @@ Generated with:
 
 ## Library 
   - Implementation us unified and added to `main/java/dilib/`        
+
+## UseA 
+  - Abstraction class, to be described
+
+
+## Hierarchy
+  - Main class Draw as interface to generic function printIt(); 
+  - Class Shape is a generic eimplementation
+  - Classes Figure.. are extenders and do specifics
+
+## Tests
+  - Step 2: Negative test for circular injection
+  - Step 3: Negative tests for double binding
+    
