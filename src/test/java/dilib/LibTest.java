@@ -83,4 +83,12 @@ public class LibTest {
         assertSame(c1.getCircle(), c2.getCircle());
     }
 
+    // Step 7    
+    @Test(expected = BindException.class)
+    public void TwoInjectionConstructors() {
+        environment.configure((binder) -> {
+            binder.bind(TwoConstructors.class);
+        });
+    }
+
 }
