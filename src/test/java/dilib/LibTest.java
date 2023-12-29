@@ -36,4 +36,28 @@ public class LibTest {
         });
     }   
 
+    // Step 4
+    @Test(expected = BindException.class)
+    public void BindingAbstractClass() {
+        environment.configure((binder) -> {
+            binder.bind(Draw.class);
+        });
+    }
+
+    @Test(expected = BindException.class)
+    public void BindingNotRegistered() {
+        environment.configure((binder) -> {
+            binder.bind(Shape.class);
+        });
+    }    
+
+    @Test(expected = BindException.class)
+    public void BindingNull() {
+        environment.configure((binder) -> {
+            binder.bind(null);
+        });
+    }
+
+
+
 }

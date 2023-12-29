@@ -38,7 +38,7 @@ Generated with:
   - Class Shape is a generic eimplementation
   - Classes Figure.. are extenders and do specifics
 
-## Tests
-  - Step 2: Negative test for circular injection
-  - Step 3: Negative tests for double binding
-    
+## Negative Tests
+  - Step 2: Circular injection
+  - Step 3: Double binding
+  - Step 4: Abstract binding
