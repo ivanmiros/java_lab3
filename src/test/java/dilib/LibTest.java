@@ -1,6 +1,8 @@
 package dilib;
 
 
+import static org.junit.Assert.assertSame;
+
 import org.fpm.di.Container;
 import org.fpm.di.Environment;
 import org.junit.Test;
@@ -66,5 +68,19 @@ public class LibTest {
         container.getComponent(FigureCircle.class);
     }
 
+    // Step 6
+    @Test
+    public void shouldResolveSingletonWithInjection() {
+        Container container = environment.configure((binder) -> {
+            binder.bind(FigureCircle.class);
+            binder.bind(SingleCircle.class);
+        });
+
+        // Singleton has to return only one object
+        SingleCircle c1 = container.getComponent(SingleCircle.class);
+        SingleCircle c2 = container.getComponent(SingleCircle.class);
+        assertSame(c1, c2);
+        assertSame(c1.getCircle(), c2.getCircle());
+    }
 
 }

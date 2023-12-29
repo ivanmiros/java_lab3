@@ -43,3 +43,6 @@ Generated with:
   - Step 3: Double binding
   - Step 4: Abstract binding
   - Step 5: Unregistered component
+
+## Positive Tests  
+  - Step 6: Check singleton  
