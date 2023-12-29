@@ -96,6 +96,7 @@ public class LibTest {
     public void NestedDependency() {
         Container container = environment.configure((binder) -> {
             binder.bind(FigureCircle.class);  
+            binder.bind(FigureSquare.class);              
             binder.bind(SingleCircle.class);
             binder.bind(Page.class);
         });

@@ -22,14 +22,17 @@ public class Main {
         // Example 2
         Container container2 = environment.configure((binder) -> {  
             binder.bind(FigureCircle.class);
+            binder.bind(FigureSquare.class);
             binder.bind(SingleCircle.class);
             binder.bind(Page.class);
         });
 
         Page p = container2.getComponent(Page.class);   
         SingleCircle sc = p.getSingleCircle();
+        FigureSquare fs = p.getFigureSquare();
         
         System.out.println(p); 
         System.out.println(sc);  
+        System.out.println(fs);         
     }
 }
