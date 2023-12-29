@@ -47,3 +47,4 @@ Generated with:
 
 ## Positive Tests  
   - Step 6: Check singleton  
+  - Step 8: Nested dependency

@@ -91,4 +91,16 @@ public class LibTest {
         });
     }
 
+    // Step 8
+    @Test
+    public void NestedDependency() {
+        Container container = environment.configure((binder) -> {
+            binder.bind(FigureCircle.class);  
+            binder.bind(SingleCircle.class);
+            binder.bind(Page.class);
+        });
+        Page p = container.getComponent(Page.class);
+        assertSame(p.getSingleCircle(), container.getComponent(SingleCircle.class));
+    }
+
 }
