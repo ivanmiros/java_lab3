@@ -42,3 +42,4 @@ Generated with:
   - Step 2: Circular injection
   - Step 3: Double binding
   - Step 4: Abstract binding
+  - Step 5: Unregistered component

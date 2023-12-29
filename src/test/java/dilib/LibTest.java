@@ -1,6 +1,7 @@
 package dilib;
 
 
+import org.fpm.di.Container;
 import org.fpm.di.Environment;
 import org.junit.Test;
 
@@ -58,6 +59,12 @@ public class LibTest {
         });
     }
 
+    // Step 5
+    @Test(expected = UnregisteredComponentException.class)
+    public void UnregisteredComponent() {
+        Container container = environment.configure((binder) -> {});
+        container.getComponent(FigureCircle.class);
+    }
 
 
 }
