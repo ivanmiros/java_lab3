@@ -37,6 +37,8 @@ Generated with:
   - Main class Draw as interface to generic function printIt(); 
   - Class Shape is a generic eimplementation
   - Classes Figure.. are extenders and do specifics
+  - Class SingleCircle is Singleton
+  - Class Page is showing injection of SingleCircle
 
 ## Negative Tests
   - Step 2: Circular injection
@@ -48,3 +50,15 @@ Generated with:
 ## Positive Tests  
   - Step 6: Check singleton  
   - Step 8: Nested dependency
+
+
+## Питання
+  - Draw: основний початковий клас - це інтерфейс з базовою функцією printIt()
+  - Shape: абстрактний клас з базовою функцією printIt() - вона не може бути визванаб тільки як приклад
+  - FigureCircle: розширення абстрактного класу зі своєю printIt(), вони наслідуються 
+  - FigureSquare: -//-  
+  - SingleCircle: сінглтон, може бути лише один
+  - Page: приклад класу де є інжект іншого класу, те саме що UseA.java  
+      Тобто коли викликаю його, то автоматично будується в середині ще один клас 
+
+            
